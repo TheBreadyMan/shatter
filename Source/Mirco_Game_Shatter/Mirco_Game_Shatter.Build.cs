@@ -9,5 +9,6 @@ public class Mirco_Game_Shatter : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PrivateDependencyModuleNames.AddRange(new string[] { "Niagara", "Niagara" });
 	}
 }
