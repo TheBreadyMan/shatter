@@ -24,7 +24,7 @@ AMirco_Game_ShatterCharacter::AMirco_Game_ShatterCharacter()
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
-	FirstPersonCameraComponent->SetRelativeLocation(FVector(-10.f, 0.f, 60.f)); // Position the camera
+	FirstPersonCameraComponent->SetRelativeLocation(FVector(-11.f, 0.f, 60.f)); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
@@ -33,7 +33,7 @@ AMirco_Game_ShatterCharacter::AMirco_Game_ShatterCharacter()
 	Mesh1P->SetupAttachment(FirstPersonCameraComponent);
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
-	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
+	Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
 }
@@ -62,7 +62,7 @@ void AMirco_Game_ShatterCharacter::SetupPlayerInputComponent(UInputComponent* Pl
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMirco_Game_ShatterCharacter::Look);
 
 		//Weapon
-		// EnhancedInputComponent->BindAction(SwingAction, ETriggerEvent::Triggered, this, &AMicro_Game_ShatterCharacter::Swing);
+		//EnhancedInputComponent->BindAction(SwingAction, ETriggerEvent::Triggered, this, &AMicro_Game_ShatterCharacter::Swing);
 	}
 	else
 	{
