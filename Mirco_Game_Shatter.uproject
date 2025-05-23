@@ -37,6 +37,10 @@
 		{
 			"Name": "Metasound",
 			"Enabled": false
+		},
+		{
+			"Name": "N10XSourceCodeAccess",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
