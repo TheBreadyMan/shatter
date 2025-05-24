@@ -33,6 +33,10 @@ APowerUpT2::APowerUpT2()
 	MeshComponent->SetGenerateOverlapEvents(false);
 
 	RotatingMovementComponent = CreateDefaultSubobject<URotatingMovementComponent>("RotatingMovementComponent");
+
+	//Niagara
+
+	
 }
 
 void APowerUpT2::OnBeginOverlapComponentEvent(
